@@ -1,7 +1,10 @@
 package com.exemplo;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
+
+import org.junit.Test;
 
 public class CalculadoraTest {
 
@@ -9,26 +12,26 @@ public class CalculadoraTest {
 
     @Test
     public void testSomar() {
-        assertEquals(5.0, calc.somar(2, 3));
-        assertEquals(-1.0, calc.somar(2, -3));
+        assertEquals(5.0, calc.somar(2, 3), 0.00001);
+        assertEquals(-1.0, calc.somar(2, -3), 0.00001);
     }
 
     @Test
     public void testSubtrair() {
-        assertEquals(-1.0, calc.subtrair(2, 3));
-        assertEquals(5.0, calc.subtrair(2, -3));
+        assertEquals(-1.0, calc.subtrair(2, 3), 0.00001);
+        assertEquals(5.0, calc.subtrair(2, -3), 0.00001);
     }
 
     @Test
     public void testMultiplicar() {
-        assertEquals(6.0, calc.multiplicar(2, 3));
-        assertEquals(-6.0, calc.multiplicar(2, -3));
+        assertEquals(6.0, calc.multiplicar(2, 3), 0.00001);
+        assertEquals(-6.0, calc.multiplicar(2, -3), 0.00001);
     }
 
     @Test
     public void testDividir() {
-        assertEquals(2.0, calc.dividir(6, 3));
-        assertEquals(-2.0, calc.dividir(6, -3));
+        assertEquals(2.0, calc.dividir(6, 3), 0.00001);
+        assertEquals(-2.0, calc.dividir(6, -3), 0.00001);
     }
 
     @Test
